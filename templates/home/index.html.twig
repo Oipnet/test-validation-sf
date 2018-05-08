@@ -12,7 +12,6 @@
         <h1>Hello! ✅</h1>
 
         {{ form_start(form) }}
-        {{ form_row(form.comments) }}
         <ul id="comment-fields-list"
             data-prototype="{{ form_widget(form.comments.vars.prototype)|e }}"
             data-widget-tags="{{ '<li></li>'|e }}"></ul>
