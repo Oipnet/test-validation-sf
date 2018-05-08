@@ -18,7 +18,12 @@ class PostType extends AbstractType
             ->add('content')
             ->add('comments', CollectionType::class, [
                 'entry_type' => CommentType::class,
-                'allow_add' => true
+                'allow_add' => true,
+                'allow_delete' => true,
+                'prototype' => true,
+                'attr' => array(
+                    'class' => 'my-selector',
+                ),
             ])
         ;
     }
