@@ -31,7 +31,7 @@ class Post
     /**
      * @var Collection
      *
-     * @ORM\OneToMany(targetEntity="App\Entity\Post", mappedBy="post")
+     * @ORM\OneToMany(targetEntity="App\Entity\Comment", mappedBy="post")
      */
     private $comments;
 

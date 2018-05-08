@@ -12,13 +12,13 @@
         <h1>Hello! ✅</h1>
 
         {{ form_start(form) }}
-        <ul id="comment-fields-list"
-            data-prototype="{{ form_widget(form.comments.vars.prototype)|e }}"
-            data-widget-tags="{{ '<li></li>'|e }}"></ul>
-        <a href="#"
-           class="add-another-collection-widget"
-           data-list="#comment-fields-list">Add another comment</a>
-        <input type="submit" value="envoyer">
+            <ul id="comment-fields-list"
+                data-prototype="{{ form_widget(form.comments.vars.prototype)|e }}"
+                data-widget-tags="{{ '<li></li>'|e }}"></ul>
+            <a href="#"
+               class="add-another-collection-widget"
+               data-list="#comment-fields-list">Add another comment</a>
+            <input type="submit" value="envoyer">
         {{ form_end(form) }}
     </div>
 {% endblock %}
