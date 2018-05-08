@@ -21,7 +21,7 @@ class Post
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="YOLA")
      */
     private $title;
 
@@ -35,7 +35,7 @@ class Post
      * @var Collection
      * @Assert\Collection(
      *     fields = {
-     *         "content" = @Assert\NotBlank
+     *         "content" = @Assert\NotBlank(message="YOLO")
      *     }
      * )
      * @ORM\OneToMany(targetEntity="App\Entity\Comment", mappedBy="post")
