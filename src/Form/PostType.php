@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Comment;
 use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -15,7 +16,10 @@ class PostType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('comments', CollectionType::class)
+            ->add('comments', CollectionType::class, [
+                'entry_type' => CommentType::class,
+                'allow_add' => true
+            ])
         ;
     }
 
